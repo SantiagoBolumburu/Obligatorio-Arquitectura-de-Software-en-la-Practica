@@ -1,0 +1,24 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>{{name}}</mat-label>
+
+        <textarea class="elInput" #elInput matInput
+            [formControl]="inputFormControl" 
+            [placeholder]="placeholder"
+            [value]="defaultval"
+            ng-disabled="all" >
+        </textarea>
+
+        <mat-error *ngIf="inputFormControl.hasError('email') && !inputFormControl.hasError('required')">
+            Entrar un email valido
+        </mat-error>
+
+        <mat-error *ngIf="inputFormControl.hasError('pattern') && !inputFormControl.hasError('required')">
+            Entrar un numero valido
+        </mat-error>
+        
+        <mat-error *ngIf="inputFormControl.hasError('required')">
+            {{name}} is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</form>

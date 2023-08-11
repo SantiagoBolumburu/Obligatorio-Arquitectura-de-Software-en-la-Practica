@@ -1,0 +1,98 @@
+<div class="all-dir-padding">
+    <mat-card>
+        <div>
+            <mat-card-header>
+                <mat-card-title>Registro de Ventas:</mat-card-title>
+            </mat-card-header>
+                
+            <div class="divdiv">
+                <div class="float-right">
+                    <mat-card-actions align="end">
+                        <button mat-raised-button color="primary"
+                                (click)="IngresarVenta()">
+                            INGRESAR
+                        </button>
+                    </mat-card-actions>
+                </div>
+                
+                <div class="float-right">
+                    <mat-card-actions align="end">
+                        <button mat-raised-button color="secondary"
+                                (click)="LimpiarDatos()">
+                            LIMPIAR
+                        </button>
+                    </mat-card-actions>
+                </div> 
+            </div>
+
+      
+            <div class="divdiv">
+                <div class="divdivdiv" #divAltaVenta>
+                    <mat-card-header>
+                        <mat-card-subtitle>Datos de la Venta:</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-actions>
+                        <table class="example-full-width" cellspacing="0">
+                            <tr>
+                                <app-date-picker #fechaDatePicker name="Fecha"  
+                                    [disabled]="false" [defaultval]="datosCampos.fechaVenta"
+                                    [required]="true">
+                                </app-date-picker>
+                            </tr>
+                            <tr>
+                                <app-input name="Monto Total" #costoTotalInput type="decimal"
+                                    [disabled]="false" defaultval="" [defaultval]="datosCampos.costoTotal">
+                                </app-input>
+                            </tr>
+                            <tr>
+                                <app-input name="Nombre del Cliente" #nombreClienteInput type="texto"
+                                    [disabled]="false" defaultval="" [defaultval]="datosCampos.nombreCliente">
+                                </app-input>
+                            </tr>
+                            <tr>
+                                <section class="example-section">
+                                    <mat-checkbox 
+                                        [(ngModel)]="esVentaProgramada">
+                                        Venta Programada
+                                    </mat-checkbox>
+                                </section>
+                            </tr>
+                        </table>
+                    </mat-card-actions>
+                </div>
+
+
+                <div class="divdivdiv" #divProductosSeleccionados>
+                    <mat-card-header>
+                        <mat-card-subtitle>Productos seleccionados:</mat-card-subtitle>
+                    </mat-card-header>
+                    <div #divProductosSeleccionados>
+                        <app-table #tablaProductosSeleccionados 
+                                [datos]="[]"
+                                [admite_remover]="true" 
+                                [admite_Input]="true"
+                                input_column_tittle="Cantidad"
+                                [input_column_options]="inputColumnOptions"
+                                [definicion_columnas]="estructuraColumnas_productosSeleccionados"
+                                [allow_example_vals_if_empty]="false">
+                        </app-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        
+        <div #divProductosDisponibles>
+            <mat-card-header>
+                <mat-card-title>Productos disponibles:</mat-card-title>
+            </mat-card-header>
+            <app-table #tablaProductosDisponibles [admite_seleccion]="true" 
+                    [definicion_columnas]="estructuraColumnas_productosDisponibles"
+                    [allow_example_vals_if_empty]="false"
+                    [datos]="datos.datosTabla_productosDisponibles"
+                    (elementoSeleccionado)="ColocarEnTablaElementosSeleccionados($event)">
+            </app-table>
+        </div>
+    </mat-card>
+</div>

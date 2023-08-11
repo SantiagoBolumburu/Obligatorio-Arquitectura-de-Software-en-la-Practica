@@ -1,0 +1,55 @@
+<div class="all-dir-padding">
+    <mat-card>
+        <div>
+            <mat-card-header>
+                <mat-card-title>Generar Application Key:</mat-card-title>
+            </mat-card-header>
+
+            <br>
+            <br>
+            <br>
+
+            <mat-card-content>
+                <div class="divdiv">
+                    <table  class="divdivdiv">
+                        <td>
+                            <tr>
+                                <button mat-raised-button color="primary"
+                                    (click)="GenerarAppKey()">Generar</button>
+                            </tr>
+                            <tr>
+                                <br>
+                                <br>
+                                <br>
+                            </tr>
+                            <tr>
+                                <button mat-raised-button color="warn"
+                                    (click)="EliminarAppKey()">Eliminar</button>
+                            </tr>
+                        </td>
+                        <td>
+                            <tr>
+                                <mat-card-subtitle>Application Key Actual:</mat-card-subtitle>
+                            </tr>
+                            <tr>
+                                <mat-card-title>{{currentAppKey}}</mat-card-title>
+                            </tr>
+                        </td>
+                    </table>
+                </div>
+            </mat-card-content>
+
+            <br>
+            <br>
+            <br>
+
+            <mat-card-footer>
+                <mat-card-subtitle>
+                    *Generar una nueva application key elimina la anterior
+                </mat-card-subtitle>
+            </mat-card-footer>
+
+        </div>
+
+    </mat-card>
+</div>

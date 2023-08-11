@@ -1,0 +1,13 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{name}}</mat-label>
+        <input matInput [matDatepicker]="picker" [formControl]="formControl">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+
+        <mat-error *ngIf="formControl.hasError('required')">
+            {{name}} is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</form>

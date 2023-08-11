@@ -1,0 +1,145 @@
+<div class="all-dir-padding">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Ultimas ventas:</mat-card-title>
+        </mat-card-header>
+
+        <div class="w-100">
+            <div class="w-50 float-right">
+                <mat-card-header>
+                    <mat-card-title>Filtros</mat-card-title>
+                </mat-card-header>    
+
+                <div class="w-100 h-50 float-right">
+                    <mat-card>
+                        <mat-card-title>--Fecha Desde</mat-card-title>
+                        <table calss="w-100  float-right">
+                            <td class="w-25">
+                                <tr>
+                                    <mat-card-actions>
+                                        <button mat-raised-button color="secondary"
+                                                (click)="LimpiarDatosFechaDesde()">
+                                            REINICIAR
+                                        </button>
+                                    </mat-card-actions>
+                                </tr>                              
+                            </td>
+
+                            <td class="w-25">
+                                <tr>
+                                    <mat-card-actions>
+                                        <button mat-raised-button color="primary"
+                                                (click)="FiltrarFechaDesde()">
+                                            INGRESAR
+                                        </button>
+                                    </mat-card-actions>
+                                </tr>
+                            </td>
+
+                            <td class="w-25">
+                                <tr>
+                                    <app-date-picker #fechaDesdePicker>
+                                    </app-date-picker> 
+                                </tr>
+                            </td>
+                        </table>
+                    </mat-card>
+                </div>
+
+                <div class="w-100 h-50 float-right">
+                    <mat-card>
+                        <mat-card-title>-- Fecha Hasta</mat-card-title>
+
+                        <table calss="w-100  float-right">
+                            <td class="w-25">
+                                <tr>
+                                    <mat-card-actions>
+                                        <button mat-raised-button color="secondary"
+                                                (click)="LimpiarDatosFechaHasta()">
+                                            REINICIAR
+                                        </button>
+                                    </mat-card-actions>
+                                </tr>
+                            </td>
+
+                            <td class="w-25">
+                                <tr>
+                                    <mat-card-actions>
+                                        <button mat-raised-button color="primary"
+                                                (click)="FiltrarFechaHasta()">
+                                            INGRESAR
+                                        </button>
+                                    </mat-card-actions>
+                                </tr>
+                            </td>
+
+                            <td class="w-25">
+                                <tr>
+                                    <app-date-picker #fechaHastaPicker>
+                                    </app-date-picker>
+                                </tr>
+                            </td>
+                        </table>
+                    </mat-card>
+                </div>
+
+
+            </div>
+
+    
+            <div #divProductosDisponibles class="w-50 h-100">
+                <mat-card-header>
+                    <mat-card-subtitle>Ultimas Ventas:</mat-card-subtitle>
+                </mat-card-header>
+                <app-table #tablaProductosDisponibles 
+                        [admite_seleccion]="false"
+                        [admite_paginacion]="true" 
+                        [definicion_columnas]="estructuraColumnas_productosDisponibles"
+                        [allow_example_vals_if_empty]="false"
+                        [datos]="datosTabla_productosDisponibles">
+                </app-table>
+            </div>
+        </div>
+
+        <br>
+        
+
+    </mat-card>
+</div>
+
+
+<!--
+
+      
+            <div class="divdiv">
+                <div class="divdivdiv" #divAltaVenta>
+                    <mat-card-header>
+                        <mat-card-subtitle>Datos de la Venta:</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-actions>
+                        <table class="example-full-width" cellspacing="0">
+                            <tr>
+                                <app-date-picker #fechaDatePicker name="Fecha"  
+                                    [disabled]="false" [defaultval]="datosCampos.fechaVenta"
+                                    [required]="true">
+                                </app-date-picker>
+                            </tr>
+                            <tr>
+                                <app-input name="Monto Total" #costoTotalInput type="decimal"
+                                    [disabled]="false" defaultval="" [defaultval]="datosCampos.costoTotal">
+                                </app-input>
+                            </tr>
+                            <tr>
+                                <app-input name="Nombre del Cliente" #nombreClienteInput type="texto"
+                                    [disabled]="false" defaultval="" [defaultval]="datosCampos.nombreCliente">
+                                </app-input>
+                            </tr>
+                        </table>
+                    </mat-card-actions>
+                </div>
+
+              
+            </div>
+
+
+-->

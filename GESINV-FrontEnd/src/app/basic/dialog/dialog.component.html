@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{data.titulo}}</h1>
+<div mat-dialog-content>
+  <div *ngFor="let linea of data.message">
+    {{linea}}
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+</div>

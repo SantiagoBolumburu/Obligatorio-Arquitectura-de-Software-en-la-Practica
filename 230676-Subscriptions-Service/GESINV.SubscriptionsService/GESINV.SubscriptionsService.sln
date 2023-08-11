@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.SubscriptionsService", "GESINV.SubscriptionsService\GESINV.SubscriptionsService.csproj", "{81323986-28B5-4B06-909B-1CB4E87C90BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.SubscriptionsService.Dominio", "GESINV.SubscriptionsService.Dominio\GESINV.SubscriptionsService.Dominio.csproj", "{A8289B2E-E8A8-41F1-AEE6-C4AF9038AE7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.SubscriptionsService.Utils", "GESINV.SubscriptionsService.Utils\GESINV.SubscriptionsService.Utils.csproj", "{15E748EC-AAF5-40A2-A5BE-9F227008825C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.SubscriptionsService.Logic", "GESINV.SubscriptionsService.Logic\GESINV.SubscriptionsService.Logic.csproj", "{352F03E5-7D73-47D8-8B75-9A8DE832BDDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.SubscriptionsService.Logic.Interface", "GESINV.SubscriptionsService.Logic.Interface\GESINV.SubscriptionsService.Logic.Interface.csproj", "{5D6F6DB0-A164-4836-A536-241598538C05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.SubscriptionsService.Models", "GESINV.SubscriptionsService.Models\GESINV.SubscriptionsService.Models.csproj", "{22015D85-BB95-4EE3-8F2B-0602AE008160}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.SubscriptionsService.DataAccess.Interface", "GESINV.SubscriptionsService.DataAccess.Interface\GESINV.SubscriptionsService.DataAccess.Interface.csproj", "{597AB018-D723-4153-A448-5A84EB361247}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.SubscriptionsService.DataAccess", "GESINV.SubscriptionsService.DataAccess\GESINV.SubscriptionsService.DataAccess.csproj", "{E8543F3B-6080-42E6-A267-EC1714A28E01}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.SubscriptionsService.BackingServices", "GESINV.SubscriptionsService.BackingServices\GESINV.SubscriptionsService.BackingServices.csproj", "{9F80359C-7062-4276-8854-E124FC427122}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GESINV.IdentityHandler", "GESINV.IdentityHandler\GESINV.IdentityHandler.csproj", "{FBFAEDC4-F05B-4932-B688-F890DFB7964A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81323986-28B5-4B06-909B-1CB4E87C90BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81323986-28B5-4B06-909B-1CB4E87C90BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81323986-28B5-4B06-909B-1CB4E87C90BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81323986-28B5-4B06-909B-1CB4E87C90BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8289B2E-E8A8-41F1-AEE6-C4AF9038AE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8289B2E-E8A8-41F1-AEE6-C4AF9038AE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8289B2E-E8A8-41F1-AEE6-C4AF9038AE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8289B2E-E8A8-41F1-AEE6-C4AF9038AE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15E748EC-AAF5-40A2-A5BE-9F227008825C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15E748EC-AAF5-40A2-A5BE-9F227008825C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15E748EC-AAF5-40A2-A5BE-9F227008825C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15E748EC-AAF5-40A2-A5BE-9F227008825C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352F03E5-7D73-47D8-8B75-9A8DE832BDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352F03E5-7D73-47D8-8B75-9A8DE832BDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352F03E5-7D73-47D8-8B75-9A8DE832BDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352F03E5-7D73-47D8-8B75-9A8DE832BDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D6F6DB0-A164-4836-A536-241598538C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6F6DB0-A164-4836-A536-241598538C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6F6DB0-A164-4836-A536-241598538C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6F6DB0-A164-4836-A536-241598538C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22015D85-BB95-4EE3-8F2B-0602AE008160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22015D85-BB95-4EE3-8F2B-0602AE008160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22015D85-BB95-4EE3-8F2B-0602AE008160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22015D85-BB95-4EE3-8F2B-0602AE008160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{597AB018-D723-4153-A448-5A84EB361247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{597AB018-D723-4153-A448-5A84EB361247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{597AB018-D723-4153-A448-5A84EB361247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{597AB018-D723-4153-A448-5A84EB361247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8543F3B-6080-42E6-A267-EC1714A28E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8543F3B-6080-42E6-A267-EC1714A28E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8543F3B-6080-42E6-A267-EC1714A28E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8543F3B-6080-42E6-A267-EC1714A28E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F80359C-7062-4276-8854-E124FC427122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F80359C-7062-4276-8854-E124FC427122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F80359C-7062-4276-8854-E124FC427122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F80359C-7062-4276-8854-E124FC427122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBFAEDC4-F05B-4932-B688-F890DFB7964A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFAEDC4-F05B-4932-B688-F890DFB7964A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFAEDC4-F05B-4932-B688-F890DFB7964A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBFAEDC4-F05B-4932-B688-F890DFB7964A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {524F20DB-66DE-4965-AB7F-1A5885EB66A0}
+	EndGlobalSection
+EndGlobal

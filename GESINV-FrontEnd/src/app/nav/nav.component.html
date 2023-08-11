@@ -1,0 +1,52 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item *ngIf="!estaLoggeado" (click)="RedirigiarA(rutas.login)">Ingresar</a>
+      <a mat-list-item *ngIf="!estaLoggeado" (click)="RedirigiarA(rutas.signin)">Registrarse</a>
+
+      <a mat-list-item *ngIf="estaLoggeado"  (click)="RedirigiarA(rutas.inicio)">Inicio</a>
+      <a mat-list-item *ngIf="esAdmin"       (click)="RedirigiarA(rutas.invitarUsaurio)">Invitar Usuarios</a>
+      <a mat-list-item *ngIf="estaLoggeado"  (click)="RedirigiarA(rutas.gestionInventario)">Gestionar Inventario</a>
+      <a mat-list-item *ngIf="esAdmin"       (click)="RedirigiarA(rutas.gestionProducto)">Gestionar Productos</a>
+      <a mat-list-item *ngIf="esAdmin"       (click)="RedirigiarA(rutas.gestionProveedores)">Gestionar Proveedores</a>
+      <a mat-list-item *ngIf="esAdmin"       (click)="RedirigiarA(rutas.suscripciones)">Gestionar Suscripciones</a>
+      <a mat-list-item *ngIf="esAdmin"       (click)="RedirigiarA(rutas.registroCompras)">Registrar Compras</a>
+      <a mat-list-item *ngIf="estaLoggeado"  (click)="RedirigiarA(rutas.registroVentas)">Registrar Ventas</a>
+      <a mat-list-item *ngIf="estaLoggeado"  (click)="RedirigiarA(rutas.reportes)">Reportes</a>
+      <a mat-list-item *ngIf="esAdmin"       (click)="RedirigiarA(rutas.appkey)">Administrar App Key</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      
+      <span>GESINV</span>
+
+      <span class="space-filler-element"></span>
+
+      <button
+        type="button"
+        mat-icon-button
+        (click)="CerrarSession()">
+        <mat-icon >logout</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <!-- Add Content Here -->
+    <router-outlet> </router-outlet>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>

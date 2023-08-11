@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>9c9a2048-d679-405a-af5c-27bfe6bdd796</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GESINV.AthenticationService.BackingServicesAccess\GESINV.AthenticationService.BackingServicesAccess.csproj" />
+    <ProjectReference Include="..\GESINV.AthenticationService.PersistanceAccess.Interface\GESINV.AthenticationService.PersistanceAccess.Interface.csproj" />
+    <ProjectReference Include="..\GESINV.AthenticationService.PersistanceAccess\GESINV.AthenticationService.PersistanceAccess.csproj" />
+    <ProjectReference Include="..\GESINV.AthenticationService.Logic.Interface\GESINV.AthenticationService.Logic.Interface.csproj" />
+    <ProjectReference Include="..\GESINV.AthenticationService.Logic\GESINV.AthenticationService.Logic.csproj" />
+    <ProjectReference Include="..\GESINV.AthenticationService.Models\GESINV.AthenticationService.Models.csproj" />
+    <ProjectReference Include="..\GESINV.AthenticationService.Utils\GESINV.AthenticationService.Utils.csproj" />
+    <ProjectReference Include="..\GESINV.IdentityHandler\GESINV.IdentityHandler.csproj" />
+  </ItemGroup>
+
+</Project>

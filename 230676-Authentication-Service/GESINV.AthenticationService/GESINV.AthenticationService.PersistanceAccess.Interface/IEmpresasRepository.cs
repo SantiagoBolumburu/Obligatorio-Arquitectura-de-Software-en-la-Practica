@@ -1,0 +1,15 @@
+﻿using GESINV.AthenticationService.Dominio;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GESINV.AthenticationService.PersistanceAccess.Interface
+{
+    public interface IEmpresasRepository
+    {
+        bool ExistByName(string name);
+        Empresa Add(Empresa empresa);
+    }
+}

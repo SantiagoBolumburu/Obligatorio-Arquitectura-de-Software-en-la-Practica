@@ -1,0 +1,31 @@
+
+<div class="all-dir-padding">
+    <mat-card >
+        <mat-card-header>
+            <mat-card-title>Invitar Usuario</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+            <table class="example-full-width" cellspacing="0">
+                <mat-card-subtitle>Usuario Administrador:</mat-card-subtitle>
+                <tr>
+                    <app-input name="Email" #emailInput
+                            [type]="inputTypes.Email" 
+                            [disabled]="false"
+                            defaultval="aaaa@aaa">
+                    </app-input>
+                </tr>
+                <tr>
+                    <app-select #rolSelect Tittle="Roles" [Options]="opcionesRoles">
+                    </app-select>
+                </tr>
+            </table>
+        </mat-card-actions>
+
+        <mat-card-actions align="end">
+            <button mat-button color="primary"
+                    (click)="InvitarUsaurio()">
+                INVITAR
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,20 @@
+<div class="all-dir-padding">
+    <mat-card>
+        <div>
+            <mat-card-header>
+                <mat-card-title>Inventario:</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-actions>
+                <app-table #tablaProductosDisponibles
+                    [datos]="[]"
+                    [admite_remover]="false" 
+                    [admite_Input]="false"
+                    [definicion_columnas]="estructuraColumnas_productosDisponibles"
+                    [allow_example_vals_if_empty]="false">
+                </app-table>
+            </mat-card-actions>
+        </div>
+
+    </mat-card>
+</div>

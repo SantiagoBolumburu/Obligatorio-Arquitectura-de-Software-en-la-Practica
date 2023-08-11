@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GESINV.SubscriptionsService.Dominio\GESINV.SubscriptionsService.Dominio.csproj" />
+    <ProjectReference Include="..\GESINV.SubscriptionsService.Models\GESINV.SubscriptionsService.Models.csproj" />
+  </ItemGroup>
+
+</Project>

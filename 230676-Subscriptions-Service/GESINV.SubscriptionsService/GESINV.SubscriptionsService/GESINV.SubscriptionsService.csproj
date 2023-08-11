@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>031dfbed-5d14-44c4-b80d-0c293a1cab3a</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GESINV.IdentityHandler\GESINV.IdentityHandler.csproj" />
+    <ProjectReference Include="..\GESINV.SubscriptionsService.DataAccess.Interface\GESINV.SubscriptionsService.DataAccess.Interface.csproj" />
+    <ProjectReference Include="..\GESINV.SubscriptionsService.DataAccess\GESINV.SubscriptionsService.DataAccess.csproj" />
+    <ProjectReference Include="..\GESINV.SubscriptionsService.Dominio\GESINV.SubscriptionsService.Dominio.csproj" />
+    <ProjectReference Include="..\GESINV.SubscriptionsService.Logic.Interface\GESINV.SubscriptionsService.Logic.Interface.csproj" />
+    <ProjectReference Include="..\GESINV.SubscriptionsService.Logic\GESINV.SubscriptionsService.Logic.csproj" />
+    <ProjectReference Include="..\GESINV.SubscriptionsService.Models\GESINV.SubscriptionsService.Models.csproj" />
+    <ProjectReference Include="..\GESINV.SubscriptionsService.Utils\GESINV.SubscriptionsService.Utils.csproj" />
+  </ItemGroup>
+</Project>

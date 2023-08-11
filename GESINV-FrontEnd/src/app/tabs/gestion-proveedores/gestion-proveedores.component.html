@@ -1,0 +1,114 @@
+<div class="all-dir-padding">
+    <mat-card>
+
+        <div class="divdiv">
+
+            <div class="divdivdiv" #divAltaProductos>
+                <mat-card-header>
+                    <mat-card-title>Alta Proveedor:</mat-card-title>
+                </mat-card-header>
+                <mat-card-actions>
+                    <table class="example-full-width" cellspacing="0">
+                        <tr>
+                            <app-input name="Nombre" #nombreInput type="texto" [disabled]="false"
+                                defaultval="">
+                            </app-input>
+                        </tr>
+                        <tr>
+                            <app-text-area name="Direccion" #direccionInput type="texto" [disabled]="false"
+                                defaultval="">
+                            </app-text-area>
+                        </tr>
+                        <tr>
+                            <app-input name="Email" #emailInput type="email" [disabled]="false"
+                                defaultval="">
+                            </app-input>
+                        </tr>
+                        <tr>
+                            <app-input name="Telefono" #telefonoInput type="digits" [disabled]="false"
+                                defaultval="">
+                            </app-input>
+                        </tr>
+                    </table>
+                </mat-card-actions>
+
+                <mat-card-actions align="end">
+                    <button mat-raised-button color="primary" (click)="IngresarProveedor()">
+                        INGRESAR
+                    </button>
+                </mat-card-actions>
+            </div>
+
+
+            <div class="divdivdiv" #divAltaProductos>
+                <mat-card-header>
+                    <mat-card-title>Modificar Proveedor:</mat-card-title>
+                </mat-card-header>
+                <mat-card-actions>
+                    <table class="example-full-width" cellspacing="0">
+                        <tr>
+                            <app-input name="Nombre" #nombreEditarInput type="texto" [disabled]="true"
+                                defaultval="">
+                            </app-input>
+                        </tr>
+                        <tr>
+                            <app-text-area name="Direccion" #direccionEditarInput type="texto" [disabled]="true"
+                                defaultval="">
+                            </app-text-area>
+                        </tr>
+                        <tr>
+                            <app-input name="Email" #emailEditarInput type="email" [disabled]="true"
+                                defaultval="">
+                            </app-input>
+                        </tr>
+                        <tr>
+                            <app-input name="Telefono" #telefonoEditarInput type="digits" [disabled]="true"
+                                defaultval="">
+                            </app-input>
+                        </tr>
+                    </table>
+                </mat-card-actions>
+
+                <div class="divdiv">
+                    <div class="float-right">
+                        <mat-card-actions align="end">
+                            <button #botonEditar mat-raised-button color="primary" 
+                                    (click)="ConfirmarEditar()" [disabled]="desabilitado.botonEditar">
+                                EDITAR
+                            </button>
+                        </mat-card-actions>
+                    </div>
+
+                    <div class="float-right">
+                        <mat-card-actions align="end">
+                            <button #botonEliminar mat-raised-button color="secondary" 
+                                    (click)="LimpiarSeleccion()" [disabled]="desabilitado.botonLimpiar">
+                                LIMPIAR
+                            </button>
+                        </mat-card-actions>
+                    </div>
+
+                    <div class="float-right">
+                        <mat-card-actions align="end">
+                            <button #botonEliminar mat-raised-button color="warn" 
+                                    (click)="ConfirmarEliminar()" [disabled]="desabilitado.botonEliminar">
+                                ELIMINAR
+                            </button>
+                        </mat-card-actions>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div >
+            <app-table #laTabla [admite_seleccion]="true" 
+                        [definicion_columnas]="estructuraColumnas"
+                        [allow_example_vals_if_empty]="false"
+                        [datos]="proveedores"
+                        (elementoSeleccionado)="EditarProveedor($event)">
+            </app-table>
+        </div>
+
+    </mat-card>
+</div>

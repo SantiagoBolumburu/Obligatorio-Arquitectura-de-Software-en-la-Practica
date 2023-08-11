@@ -1,0 +1,53 @@
+
+<div class="all-dir-padding">
+    <mat-card >
+        <mat-card-header>
+            <mat-card-title>{{texto.titulo}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+            <table class="example-full-width" cellspacing="0">
+                <mat-card-subtitle>Usuario Administrador:</mat-card-subtitle>
+                <tr>
+                    <app-input name="Nombre" #nameInput
+                            [type]="inputTypes.Texto" 
+                            [disabled]="false"
+                            defaultval="">
+                    </app-input>
+                </tr>
+                <tr>
+                    <app-input name="Email" #emailInput
+                            [type]="inputTypes.Email" 
+                            [disabled]="false"
+                            defaultval="">
+                    </app-input>
+                </tr>
+                <tr>
+                    <app-input name="Contraseña" #passwordInput
+                            [disabled]="false"
+                            defaultval="">
+                    </app-input>
+                </tr>
+            </table>
+        </mat-card-actions>
+
+        <mat-card-actions>
+            <table class="example-full-width" cellspacing="0">
+                <mat-card-subtitle>Empresa:</mat-card-subtitle>
+                <tr>
+                    <app-input name="Nombre" #nombreEmpresaInput
+                            [type]="inputTypes.Texto" 
+                            [disabled]="false"
+                            defaultval="">
+                    </app-input>
+                </tr>
+            </table>
+        </mat-card-actions>
+
+        <mat-card-actions align="end">
+            <button mat-button color="primary"
+                    (click)="Registrar()">
+                REGISTRAR
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

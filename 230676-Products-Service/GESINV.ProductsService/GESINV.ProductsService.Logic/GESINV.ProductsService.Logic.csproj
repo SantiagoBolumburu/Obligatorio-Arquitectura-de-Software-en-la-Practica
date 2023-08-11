@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GESINV.IdentityHandler\GESINV.IdentityHandler.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.BackingServices.Interface\GESINV.ProductsService.BackingServices.Interface.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.Dominio\GESINV.ProductsService.Dominio.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.Logic.Interface\GESINV.ProductsService.Logic.Interface.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.Models\GESINV.ProductsService.Models.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.PersistanceAccess.Interface\GESINV.ProductsService.PersistanceAccess.Interface.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.Utils\GESINV.ProductsService.Utils.csproj" />
+  </ItemGroup>
+
+</Project>

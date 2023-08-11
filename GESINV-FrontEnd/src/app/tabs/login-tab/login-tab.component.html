@@ -1,0 +1,35 @@
+
+<div class="all-dir-padding">
+    <mat-card >
+        <mat-card-header>
+            <mat-card-title>Ingresar</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-actions>
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <app-input [name]="inputNames.Email" #emailInput
+                            [type]="inputTypes.Email" 
+                            [disabled]="false"
+                            defaultval="sbt.testing.2023@gmail.com">
+                    </app-input>
+                </tr>
+                <tr>
+                    <app-input [name]="inputNames.Contrasenia" #passwordInput
+                            [disabled]="false"
+                            defaultval="stringPass_sbt">
+                    </app-input>
+                </tr>
+    
+            </table>
+    
+        </mat-card-actions>
+    
+        <mat-card-actions align="end">
+            <button mat-button color="primary"
+                    (click)="LoggearUsuario()">
+                LOGGEARSE
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,57 @@
+<form class="all-dir-padding">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+  
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef" >
+     
+      <th mat-header-cell *matHeaderCellDef>
+        {{column.header}}
+      </th>
+
+      <td mat-cell *matCellDef="let row; let i = row">
+        <div *ngIf="column.soyButton; else buttonRemoveCell" class="button-div">
+          <button mat-raised-button color="accent" 
+                            type='button'
+                            (click)="EmitirSeleccion(row)">
+            {{column.cell(row)}}
+          </button>
+        </div>
+
+        <ng-template #buttonRemoveCell>
+          <div *ngIf="column.soyButtonDelete; else inputcell" class="button-div">
+            <button mat-raised-button color="warn" 
+                        type='button'
+                        (click)="EmitirRemover(row)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </ng-template>
+
+        <ng-template #inputcell >
+          <div *ngIf="column.soyInput; else texto">
+            <app-input #inputCellElement
+                        [name]="input_column_options.nombre" 
+                        [type]="input_column_options.tipo"
+                        [defaultval]="input_column_options.defaultval"
+                        [disabled]="input_column_options.disabled"
+                        [placeholder]="input_column_options.placeholder">
+            </app-input>
+          </div>
+        </ng-template>
+      
+        <ng-template #texto>
+          {{column.cell(row)}} 
+        </ng-template>
+      </td>
+      
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div *ngIf="admite_paginacion;">
+    <mat-paginator #paginator [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+      aria-label="Select page of elements">
+    </mat-paginator>
+  </div>
+</form>

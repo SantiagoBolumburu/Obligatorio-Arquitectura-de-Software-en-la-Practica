@@ -1,0 +1,75 @@
+<div class="all-dir-padding">
+    <mat-card>
+        <div>
+            <mat-card-header>
+                <mat-card-title>Subscripciones:</mat-card-title>
+            </mat-card-header>
+            <mat-card-actions>
+                <table class="table">
+                    <tr>
+                        <th>
+                            <h2>Nombre</h2>
+                        </th>
+                        <td>
+                            <h2>Suscrito a Compra/Venta</h2>
+                        </td>
+                        <td>
+                            <h2>Suscrito a Stock</h2>
+                        </td>
+                    </tr>
+                    <ng-container *ngFor="let sub of subscripciones">
+                        <tr>
+                            <td>
+                                <h2>{{sub.PorductoNombre}}</h2>
+                            </td>
+                            <td class="divdiv">
+                                <button mat-raised-button color="primary" 
+                                    type='button'
+                                    [disabled]="sub.SubscriptoCompraVenta"
+                                    (click)="SubscribirACompraVenta(sub)">
+                                    Suscribir
+                                </button>
+                                <button mat-raised-button color="warn" 
+                                    type='button'
+                                    [disabled]="!sub.SubscriptoCompraVenta"
+                                    (click)="DesubscribirACompraVenta(sub)">
+                                    Desuscribir
+                                </button>
+                            </td>
+                            <td class="divdiv">
+                                <button mat-raised-button color="primary" 
+                                    type='button'
+                                    [disabled]="sub.SubscriptoStock"
+                                    (click)="SubscribirAStock(sub)">
+                                    Suscribir
+                                </button>
+                                <button mat-raised-button color="warn" 
+                                    type='button'
+                                    [disabled]="!sub.SubscriptoStock"
+                                    (click)="DesubscribirAStock(sub)">
+                                    Desuscribir
+                                </button>
+                            </td>
+                        </tr>
+                    </ng-container>
+                </table>
+
+            </mat-card-actions>
+
+        </div>
+
+        <!--
+
+    
+                <app-table #tablaProductosDisponibles
+                    [datos]="[]"
+                    [admite_remover]="false" 
+                    [admite_Input]="false"
+                    [definicion_columnas]="estructuraColumnas_productosDisponibles"
+                    [allow_example_vals_if_empty]="false">
+                </app-table>
+
+        -->
+
+    </mat-card>
+</div>

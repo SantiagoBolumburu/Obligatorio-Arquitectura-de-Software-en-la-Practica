@@ -1,0 +1,18 @@
+<form class="example-form">
+    <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>{{Tittle}}</mat-label>
+        <mat-select matNativeControl 
+            [formControl]="selectFormControl"
+            [(value)]="selectedOption" 
+            #ElSelect><!--disableSelect.value-->
+            <mat-option *ngFor="let option of Options" 
+                        [value]="option.Valor" 
+                        [disabled]="option.Desabilitado">
+                {{option.Texto}}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="selectFormControl.hasError('required')">
+            {{Tittle}} is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+</form>

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>ae5b2986-66dc-49b7-a6ec-7a47476aeb92</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GESINV.IdentityHandler\GESINV.IdentityHandler.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.BackingServices\GESINV.ProductsService.BackingServices.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.Logic.Interface\GESINV.ProductsService.Logic.Interface.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.Logic\GESINV.ProductsService.Logic.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.Models\GESINV.ProductsService.Models.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.PersistanceAccess.Interface\GESINV.ProductsService.PersistanceAccess.Interface.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.PersistanceAccess\GESINV.ProductsService.PersistanceAccess.csproj" />
+    <ProjectReference Include="..\GESINV.ProductsService.Utils\GESINV.ProductsService.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
