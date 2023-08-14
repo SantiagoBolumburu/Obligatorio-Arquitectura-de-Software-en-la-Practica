@@ -5,6 +5,7 @@ El proyecto que hice para el obligatorio requerido en la materia "Arquitectura d
 
 ## Descripción general:
 Este proyecto se divide en 6 partes: 1 frontend creado en Angular, y 5 microservicios que conforman el backend (4 escritos en C#, y uno en Gol (Golang)). Los 6 servicios originalmente se encontraban en un repositorio distinto cada uno.
+
 El proyecto es un sistema de gestión de inventario, que permite a usuarios crearse cuentas y empresas, a las cuales pueden invitar a otros usuarios con distintos roles. Dichos usuarios pueden ingresar y eliminar nuevos productos y proveedores de estos, así como modificar su información. También se permite ingresar compras y ventas de productos: estas modifican el stock de los productos, y en el caso de las compras tienen un proveedor asociado. Además, se pueden generar reportes, los cuales son enviados por email, y subscribirse a productos para recibir (por email) actualizaciones de su stock y eventos (ventas y compras).
 
 ## Descripción de Arquitectura:
